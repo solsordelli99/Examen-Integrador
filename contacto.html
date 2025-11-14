@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Personal - Sordelli</title>
+  <link rel="stylesheet" href="diseño.css">
+</head>
+<body>
+  <header class="banner">
+    <div>
+      <h1>Ficha Personal</h1>
+      <h2>Perfil de Estudiante</h2>
+    </div>
+    <button class="toggle-dark" id="colorModeBtn" title="Cambiar modo">
+      <img src="icono luna.png" alt="Cambiar modo" />
+    </button>
+  </header>
+
+  <main>
+    <section class="perfil-section">
+      <img src="perfil.jpeg" alt="Foto de perfil" class="foto-perfil">
+      <div class="perfil-datos">
+        <h2 class="nombre-alumno">Maria Sol Sordelli</h2>
+        <nav class="nav-botones">
+          <a href="index.html" class="nav-btn">HOME</a>
+          <a href="https://solsordelli99.github.io/Trabajo-obligatorio-Local-comercial/" class="nav-btn" target="_blank">Local Comercial</a>
+          <a href="https://solsordelli99.github.io/Fan-Page-Parte-3/" class="nav-btn" target="_blank">Fan Page</a>
+          <a href="contacto.html" class="nav-btn activo">Contacto</a>
+        </nav>
+        <form class="form-contacto" action="mailto:ssordelli@uade.edu.ar" method="POST" enctype="text/plain">
+          <h3>Contacto</h3>
+          <div class="fila-form">
+            <div class="campo-form">
+              <label for="fname">Nombre:</label>
+              <input type="text" id="fname" name="fname" required>
+            </div>
+            <div class="campo-form">
+              <label for="lname">Apellido:</label>
+              <input type="text" id="lname" name="lname" required>
+            </div>
+            <div class="campo-form">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="campo-form">
+            <label for="comentario">Comentarios:</label>
+            <textarea id="comentario" name="comentario" rows="5" required></textarea>
+          </div>
+          <div class="boton-form">
+            <input type="submit" value="Enviar">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <span class="footer-copy">&copy; 2025 Todos los derechos reservados</span>
+    <a class="footer-gh" href="https://github.com/solsordelli99/Examen-Integrador" target="_blank" rel="noopener">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="24" style="vertical-align: middle; margin-right:6px;">
+      Ver en GitHub
+    </a>
+  </footer>
+  
+  <script>
+    document.getElementById('colorModeBtn').onclick = function() {
+      document.body.classList.toggle('dark');
+    };
+  </script>
+</body>
+</html>
